@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import './Product.css'
+import {convertToFixed} from '../../helpers/Utility'
+
 
 class Product extends Component{
     render () {
@@ -20,8 +22,8 @@ class Product extends Component{
                         originalPrice > price
                         ? (
                             <span>
-                                <del>U$${ originalPrice }</del>
-                                U$${ price }
+                                <del>U$${ convertToFixed(originalPrice) }</del>
+                                U$${ convertToFixed(price) }
                             </span>
                         )
                         : (
